@@ -66,6 +66,8 @@ Configuramos EC2 para el proyecto y configuramos las reglas
 
 Lanzamos docker y en los respectivos puertos corremos las imagenes de DockerHub
 
+![](README/ec2.png)
+
 ## Built With
 * [Java](https://www.java.com/) - Lenguaje de programación principal
 * [Maven](https://maven.apache.org/) - Gestión de dependencias y construcción del proyecto
