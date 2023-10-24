@@ -5,7 +5,7 @@ import spark.Spark;
 import static spark.Spark.*;
 
 public class AppWeb {
-    public static void main(String... args){
+    public static void main(String... args) {
         port(getPort());
         Spark.staticFiles.header("Access-Control-Allow-Origin", "*");
         //configuration for request from front
@@ -28,10 +28,13 @@ public class AppWeb {
             res.header("Access-Control-Allow-Headers", "*");
             res.type("application/json");
         });
-        get("/", (req,res) -> {
+        get("/", (req, res) -> {
 
-            return "<!DOCTYPE html>\n" +
-            "<html lang=\"en\">\n" +
+            return "HTTP/1.1 200 OK\r\n"
+                    + "Content-Type: text/html\r\n"
+                    + "\r\n" +
+                    "<!DOCTYPE html>\n" +
+                    "<html lang=\"en\">\n" +
                     "<head>\n" +
                     "    <meta charset=\"UTF-8\">\n" +
                     "    <title>SparkWebApp</title>\n" +
